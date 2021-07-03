@@ -1,12 +1,15 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-
-let specialEl = ['!', '@', '#', '$','%', '^','&','*', '(',')'];
-let number = ['1','2','3','4','5','6','7','8','9','0'];
-let alpha = ['a', 'b', 'c', 'd', 'e','f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'u', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+// Special Characters
+let specialEl = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')'];
+// Number charaters 
+let number = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
+// lowercase characters 
+let alpha = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'u', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 space = [];
-
-//add numeric variables. 
+let toUpper = function (x) {
+  return x.toUpperCase();
+};
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
@@ -14,7 +17,7 @@ function writePassword() {
 
   passwordText.value = password;
 
-}
+};
 function passwordCriteria() {
   let length = parseInt(prompt('Choose a length for your password, 8-128 characters.'))
   if (length < 8) {
@@ -25,28 +28,55 @@ function passwordCriteria() {
     alert('Password must be less than 128 characters long.');
     return length;
   };
-  var hasLower = confirm('click ok to confirm');
+  var hasLower = confirm('Will this use Lowercase?');
   //var hadUpper =confirm() also do for the upper and lower 
   // var when i answer a prompt than my input should be calidated with one cha type sho
-  var hasUpper = confirm('click to confirm');
-  var hadSpecial = confirm('click to confirm');
+  var hasUpper = confirm('Will this use Uppercase letters?');
+  var hasSpecial = confirm('Will this use Speical Characters?');
+  var hasNumber = confirm('Will this use numbers?');
+  if (!hasNumber && !hasUpper && !hasSpecial && !hasNumber){
+    choice = alert('You must choose a criteria!')
+    };
+//4 positive choices
+ 
+if (hasLower && hasNumber && hasSpecial && hasUpper){
+    choice = character.concat(number, alpha, specialEl);
 };
+// 3 positives choices
+if (hasNumber && hasSpecial && hasUpper)
+{
+  choice = character.concat(hasNumber, hasSpecial, hasUpper)
+}
+  else if (hasLower && hasNumber && hasSpecial){
+    choice = character.concat(hasLower, number, hasSpecial)
+  }
+  else if (hasUpper && hasLower && hasNumber){
+    choice character.concat(hasUpper, hasLower, hasNumber)
+  }
+  else if (hasLower && hasSpecial && hasNumber){
+      choice character.concat(hasLower, hasSpecial, hasNumber)
+  };
+//if choice is 2 
+if (has)
+}
+
 //Write the code to diplay the actual password, using a function, 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-function generatePassword(){
+function generatePassword() {
   var options = passwordCriteria();
+
   //if statements with the .concat
 
   let passwordFinal = []
 
 
-// create an empty arry of charters to be seen 
-}
-
-for () {
-  let generatePassword i =1; i < 10; i++;
+  // create an empty arry of charters to be seen 
 };
+
+//for () {
+  //let generatePassword i =1; i < 10; i++;
+//};
 //random index 
 //build a loop to create the pass word for loop for(var i=), i< varable i++
 //use while to keep the going 
