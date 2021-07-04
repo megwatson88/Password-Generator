@@ -97,16 +97,26 @@ function passwordCriteria() {
     else if (hasSpecial){
       choice = hasSpecial
     }
-    
+    password = [];
   };
-    password []
-};
+  for (var i = 0; i < enter; i++) {
+    var pickChoices = choice[Math.floor(Math.random()* choice.length)];
+    password.push(pickChoices)
+  } 
+  var ps = password.join('');
+  UserInput(ps);
+  return ps;
+}
+function UserInput(ps){
+  document.getElementById('password').textContent = ps;
+}
+;
 
 //Write the code to diplay the actual password, using a function, 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 function generatePassword() {
-  var options = passwordCriteria();
+  var options = passwordCriteria(password);
   let passwordFinal = [];
   
 
