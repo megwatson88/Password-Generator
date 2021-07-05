@@ -22,6 +22,7 @@ THEN a password is generated that matches the selected criteria </li>
 <li>WHEN the password is generated
 THEN the password is either displayed in an alert or written to the page</li>
 </ol>
+
 # Sources 
 <ul>
 <li>W3Schoots.com</li>
