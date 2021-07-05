@@ -103,21 +103,16 @@ function passwordCriteria() {
     var pickChoices = choice[Math.floor(Math.random()* choice.length)];
     password.push(pickChoices)
   } 
-  var ps = password.join('');
-  UserInput(ps);
-  return ps;
-}
-function UserInput(ps){
-  document.getElementById('password').textContent = ps;
-}
-;
+  
+};
+
+
 
 //Write the code to diplay the actual password, using a function, 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 function generatePassword() {
-  var options = passwordCriteria(password);
+  var options = passwordCriteria();
   let passwordFinal = [];
-  
-
+  return passwordFinal;
 };
